@@ -1,5 +1,13 @@
 # event-bus
 
+## main.js
+```javascript
+import Vue from 'vue'
+...
+Vue.prototype.$EventBus = new Vue();
+...
+```
+
 ## Create Component: Body.vue
 ```javascript
 <template>
