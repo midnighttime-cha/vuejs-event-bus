@@ -1,6 +1,33 @@
 # event-bus
 
-## Create Component: Header
+## Create Component: Body.vue
+```javascript
+<template>
+  <div>
+    <strong>
+      <font size="8px">Body: {{text}}</font>
+    </strong>
+    <br />
+    <button @click="onEvent()">Click Here..</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    text: "Hello Bangkok"
+  }),
+
+  methods: {
+    onEvent() {
+      this.$EventBus.$emit("hello-bangkok", this.text);
+    }
+  }
+};
+</script>
+```
+
+## Create Component: Header.vue
 ```javascript
 <template>
   <div>
@@ -26,20 +53,27 @@ export default {
 </script>
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Create Component: Footer.vue
+```javascript
+<template>
+  <div>
+    <strong>
+      <font size="8px">Footer: {{textFooter}}</font>
+    </strong>
+  </div>
+</template>
 
-### Compiles and minifies for production
+<script>
+export default {
+  data: () => ({
+    textFooter: "?"
+  }),
+  mounted() {
+    this.$EventBus.$on("hello-bangkok", param1 => {
+      console.log("Receive event.", param1);
+      this.textFooter = param1;
+    });
+  }
+};
+</script>
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
