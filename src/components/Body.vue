@@ -1,7 +1,7 @@
 <template>
   <div>
     <strong>
-      <font size="8px">Body: {{text}}</font>
+      <font size="8px">Body: {{textBody}}</font>
     </strong>
     <br />
     <button @click="onEvent()">Click Here..</button>
@@ -11,12 +11,13 @@
 <script>
 export default {
   data: () => ({
-    text: "Hello Bangkok"
+    textBody: "?"
   }),
 
   methods: {
     onEvent() {
-      this.$EventBus.$emit("hello-bangkok", this.text);
+      this.textBody = "Hello Bangkok";
+      this.$EventBus.$emit("hello-bangkok", this.textBody);
     }
   }
 };

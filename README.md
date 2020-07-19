@@ -15,12 +15,13 @@
 <script>
 export default {
   data: () => ({
-    text: "Hello Bangkok"
+    textBody: "?"
   }),
 
   methods: {
     onEvent() {
-      this.$EventBus.$emit("hello-bangkok", this.text);
+      this.textBody = "Hello Bangkok";
+      this.$EventBus.$emit("hello-bangkok", this.textBody);
     }
   }
 };
@@ -77,3 +78,6 @@ export default {
 };
 </script>
 ```
+
+## Click Button in Body.vue
+<img alt="Vue logo" src="./assets/first.jpeg" />
