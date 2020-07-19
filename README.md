@@ -1,7 +1,7 @@
 # event-bus
 
 ## Create Component: Header
-```vuejs
+```javascript
 <template>
   <div>
     <strong>
