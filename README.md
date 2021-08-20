@@ -1,6 +1,6 @@
-# event-bus
+# การใช้งาน Event Bus ใน vue2
 
-## main.js
+## เริ่มต้นจากไฟล์ main.js
 ```javascript
 import Vue from 'vue'
 ...
@@ -8,7 +8,7 @@ Vue.prototype.$EventBus = new Vue();
 ...
 ```
 
-## Create Component: Body.vue
+## สร้าง Component ชื่อว่า Body.vue ตามตัวอย่างต่อไปนี้
 ```javascript
 <template>
   <div>
@@ -36,7 +36,7 @@ export default {
 </script>
 ```
 
-## Create Component: Header.vue
+## สร้าง Component ชื่อว่า Header.vue ตามตัวอย่างต่อไปนี้
 ```javascript
 <template>
   <div>
@@ -62,7 +62,7 @@ export default {
 </script>
 ```
 
-## Create Component: Footer.vue
+## สร้างไฟล์ Component ชื่อว่า Footer.vue  ตามตัวอย่างต่อไปนี้
 ```javascript
 <template>
   <div>
